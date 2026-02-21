@@ -3,6 +3,7 @@ package com.anderson.todouser.model;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "tarefas")
 public class Tarefa {
 
     @Id

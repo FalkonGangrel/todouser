@@ -1,29 +1,20 @@
-package com.anderson.todouser.model;
+package com.anderson.todouser.dto;
 
-import jakarta.persistence.*;
-import java.util.List;
+import jakarta.validation.constraints.Email;
+import jakarta.validation.constraints.NotBlank;
+import jakarta.validation.constraints.Size;
 
-@Entity
-@Table(name = "usuarios")
-public class Usuario {
+public class UsuarioRequestDTO {
 
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
-
+    @NotBlank
     private String nome;
 
-    @Column(unique = true, nullable = false)
+    @Email
+    @NotBlank
     private String email;
 
+    @Size(min = 6)
     private String senha;
-
-    @OneToMany(mappedBy = "usuario", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Tarefa> tarefas;
-
-    public Long getId() {
-        return id;
-    }
 
     public String getNome() {
         return nome;
