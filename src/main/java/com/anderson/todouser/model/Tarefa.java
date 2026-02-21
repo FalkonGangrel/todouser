@@ -1,4 +1,4 @@
-package com.seunome.todouser.model;
+package com.anderson.todouser.model;
 
 import jakarta.persistence.*;
 

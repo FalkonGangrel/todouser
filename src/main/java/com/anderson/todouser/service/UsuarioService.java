@@ -1,5 +1,7 @@
 package com.anderson.todouser.service;
 
+import com.anderson.todouser.model.Usuario;
+import com.anderson.todouser.repository.UsuarioRepository;
 import org.springframework.stereotype.Service;
 import java.util.List;
 
